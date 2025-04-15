@@ -4,184 +4,209 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ATHA Garten- & Winterdienst</title>
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Montserrat', sans-serif;
       background-color: #ffffff;
       color: #111;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #2e7d32;
+      background-color: #1B5E20;
       color: white;
-      padding: 20px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      padding: 30px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .header-container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 20px;
+      padding: 0 30px;
     }
 
     .logo {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 700;
+      letter-spacing: 1px;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 20px;
+      list-style: none;
+      gap: 30px;
     }
 
     nav ul li a {
-      color: white;
       text-decoration: none;
+      color: white;
       font-weight: 500;
+      font-size: 16px;
+      transition: opacity 0.2s ease;
     }
 
     nav ul li a:hover {
-      text-decoration: underline;
+      opacity: 0.75;
     }
 
     #hero {
-      background: linear-gradient(rgba(0, 128, 0, 0.6), rgba(0, 128, 0, 0.4)), url('vi.png') center/cover no-repeat;
+      background: linear-gradient(rgba(0, 128, 0, 0.7), rgba(0, 128, 0, 0.4)), url('vi.png') center/cover no-repeat;
       color: white;
-      padding: 100px 20px;
       text-align: center;
+      padding: 120px 20px;
+    }
+
+    #hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    #hero p {
+      font-size: 18px;
+      margin-top: 10px;
     }
 
     .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
+      margin-top: 30px;
+      padding: 16px 32px;
       background-color: #ffffff;
-      color: #2e7d32;
+      color: #1B5E20;
+      font-size: 16px;
       font-weight: bold;
-      border-radius: 6px;
+      border: none;
+      border-radius: 8px;
       text-decoration: none;
-      transition: 0.3s ease;
+      transition: background-color 0.3s ease;
     }
 
     .cta-button:hover {
-      background-color: #e0e0e0;
+      background-color: #f1f1f1;
     }
 
     section {
-      padding: 60px 20px;
+      padding: 80px 30px;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #2e7d32;
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #1B5E20;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .leistung-box {
+      background-color: #f1f8e9;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      font-size: 18px;
+    }
+
+    .kontaktbox, form {
+      background-color: #f1f8e9;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
       gap: 20px;
     }
 
-    .leistung-box, .kontaktbox {
-      background-color: #f1f8e9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    input, textarea {
+      padding: 14px;
       font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button[type="submit"] {
+      padding: 14px;
+      background-color: #1B5E20;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .map-container {
+      margin-top: 40px;
+      border-radius: 12px;
+      overflow: hidden;
     }
 
     footer {
       background-color: #eeeeee;
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      padding: 30px;
       color: #333;
-    }
-
-    #kontaktformular form {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    #kontaktformular input, #kontaktformular textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-
-    #kontaktformular button {
-      padding: 12px;
-      background-color: #2e7d32;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    #kontaktformular button:hover {
-      background-color: #256429;
-    }
-
-    .map-container {
-      margin-top: 40px;
-      border-radius: 8px;
-      overflow: hidden;
+      font-size: 14px;
     }
 
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #25d366;
+      background-color: #25D366;
       color: white;
-      border-radius: 50%;
       width: 60px;
       height: 60px;
+      border-radius: 50%;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       font-size: 28px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       z-index: 999;
     }
 
-    @media(max-width: 600px) {
+    @media (max-width: 600px) {
       .header-container {
         flex-direction: column;
         align-items: flex-start;
       }
+
       nav ul {
         flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+        gap: 15px;
+        margin-top: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <a href="https://wa.me/491234567890" class="whatsapp-float" title="Schreib uns auf WhatsApp">💬</a>
+  <a href="https://wa.me/491234567890" class="whatsapp-float">💬</a>
 
   <header>
-    <div class="container header-container">
+    <div class="header-container">
       <div class="logo">ATHA</div>
       <nav>
         <ul>
@@ -219,8 +244,8 @@
     <div class="container">
       <h2>Kontakt</h2>
       <div class="kontaktbox">
-        <p>📞 Telefon: <strong>01234 / 567890</strong><br>
-           📧 E-Mail: <strong>info@atha-service.de</strong></p>
+        <p><strong>📞 Telefon:</strong> 01234 / 567890<br>
+        <strong>📧 E-Mail:</strong> info@atha-service.de</p>
       </div>
     </div>
   </section>
@@ -239,7 +264,7 @@
 
   <section id="karte">
     <div class="container">
-      <h2>Wo wir sind</h2>
+      <h2>Standort</h2>
       <div class="map-container">
         <iframe src="https://www.google.com/maps?q=Niederkassel&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
